@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * Класс, представляющий сущность задачи уведомления.
+ * Хранит информацию о задаче, включая идентификатор чата, текст сообщения и время уведомления.
+ */
 @Entity
 public class NotificationTask {
 
@@ -11,12 +15,21 @@ public class NotificationTask {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Идентификатор чата, в который будет отправлено уведомление.
+     */
     @Column(name = "chat_id")
     private Long chatId;
 
+    /**
+     * Текст сообщения для уведомления.
+     */
     @Column(name = "message_text")
     private String messageText;
 
+    /**
+     * Дата и время, когда должно быть отправлено уведомление.
+     */
     @Column(name = "notification_date_time")
     private LocalDateTime notificationDateTime;
 

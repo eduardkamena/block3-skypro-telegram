@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Класс, обрабатывающий входящие обновления от Telegram бота.
+ * Реагирует на команды и сообщения пользователей, сохраняет задачи уведомлений.
+ */
 @Service
 public class TelegramBotUpdatesListener implements UpdatesListener {
 
@@ -46,11 +50,20 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
     @Autowired
     private NotificationTaskRepository notificationTaskRepository;
 
+    /**
+     * Инициализация слушателя обновлений.
+     */
     @PostConstruct
     public void init() {
         telegramBot.setUpdatesListener(this);
     }
 
+    /**
+     * Обрабатывает входящие обновления от Telegram бота.
+     *
+     * @param updates Список обновлений.
+     * @return Код подтверждения обработки обновлений.
+     */
     @Override
     public int process(List<Update> updates) {
         updates.forEach(update -> {
