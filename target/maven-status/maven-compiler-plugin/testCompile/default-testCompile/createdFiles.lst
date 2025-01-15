@@ -1,0 +1,4 @@
+pro\sky\telegrambot\job\NotificationJobTest.class
+pro\sky\telegrambot\service\impl\MessageSenderServiceImplTest.class
+pro\sky\telegrambot\listener\TelegramBotUpdatesListenerTest.class
+pro\sky\telegrambot\TelegramBotApplicationTests.class
