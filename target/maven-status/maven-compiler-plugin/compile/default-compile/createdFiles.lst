@@ -1,0 +1,8 @@
+pro\sky\telegrambot\service\MessageSenderService.class
+pro\sky\telegrambot\entity\NotificationTask.class
+pro\sky\telegrambot\service\impl\MessageSenderServiceImpl.class
+pro\sky\telegrambot\TelegramBotApplication.class
+pro\sky\telegrambot\configuration\TelegramBotConfiguration.class
+pro\sky\telegrambot\repository\NotificationTaskRepository.class
+pro\sky\telegrambot\listener\TelegramBotUpdatesListener.class
+pro\sky\telegrambot\job\NotificationJob.class
