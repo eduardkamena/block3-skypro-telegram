@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pro.sky.telegrambot.service.MessageSenderService;
 
+/**
+ * Сервис для отправки сообщений через Telegram бота.
+ */
 @Component
 public class MessageSenderServiceImpl implements MessageSenderService {
 
@@ -17,7 +20,12 @@ public class MessageSenderServiceImpl implements MessageSenderService {
     @Autowired
     private TelegramBot telegramBot;
 
-    // Метод отправки сообщений от бота к пользователю
+    /**
+     * Отправляет сообщение в указанный чат.
+     *
+     * @param chatID Идентификатор чата.
+     * @param messageText Текст сообщения.
+     */
     @Override
     public void sendMessage(Long chatID, String messageText) {
         SendMessage sendMessage = new SendMessage(chatID, messageText);
